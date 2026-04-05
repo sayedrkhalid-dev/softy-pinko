@@ -17,7 +17,7 @@ const Banner = () => {
           </div>
 
           {/* Banner title */}
-          <h1 className="text-6xl font-bold text-gray-50">
+          <h1 className="text-4xl md:text-6xl font-bold text-gray-50">
             Elevate Your Brand With Innovation
           </h1>
 
@@ -30,12 +30,12 @@ const Banner = () => {
           {/* Banner buttons */}
           <div className="flex gap-4">
             {/* Banner primary button */}
-            <button className="bg-gray-100 text-purple-600 font-bold px-8 py-3 rounded-full shadow-md cursor-pointer transition-all duration-300 hover:-translate-y-0.5">
+            <button className="bg-gray-100 text-purple-600 font-bold px-4 md:px-8 py-3 rounded-full shadow-md cursor-pointer transition-all duration-300 hover:-translate-y-0.5">
               Discover More
             </button>
 
             {/* Banner secondary button */}
-            <button className="bg-gray-100/20 text-gray-50 border-2 border-gray-300/50 font-bold px-8 py-3 rounded-full shadow-md cursor-pointer transition-all duration-300 hover:-translate-y-0.5">
+            <button className="bg-gray-100/20 text-gray-50 border-2 border-gray-300/50 font-bold px-4 md:px-8 py-3 rounded-full shadow-md cursor-pointer transition-all duration-300 hover:-translate-y-0.5">
               Our Process
             </button>
           </div>
@@ -44,7 +44,11 @@ const Banner = () => {
         {/* Banner right */}
         <div className="md:flex-1 order-1 md:order-2 flex justify-center items-center">
           <div>
-            <img src={banner_main} alt="Banner image" />
+            <img
+              src={banner_main}
+              alt="Banner image"
+              className="rounded-lg opacity-85"
+            />
           </div>
         </div>
       </div>
