@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 80" fill="none">
+  <defs>
+    <linearGradient id="rocketBody" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF6FB7"/>
+      <stop offset="100%" stop-color="#7B2FF7"/>
+    </linearGradient>
+    <linearGradient id="rocketWing" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5B21E8"/>
+      <stop offset="100%" stop-color="#7B2FF7"/>
+    </linearGradient>
+    <linearGradient id="flame" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFD04A"/>
+      <stop offset="100%" stop-color="#FF8C00"/>
+    </linearGradient>
+    <linearGradient id="textSofty" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7B2FF7"/>
+      <stop offset="100%" stop-color="#A855F7"/>
+    </linearGradient>
+    <linearGradient id="textPinko" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#EC4899"/>
+      <stop offset="100%" stop-color="#F472B6"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Rocket body -->
+  <ellipse cx="42" cy="34" rx="13" ry="21" transform="rotate(-45 42 34)" fill="url(#rocketBody)"/>
+  <!-- Rocket window -->
+  <circle cx="42" cy="35" r="5" fill="white" opacity="0.9"/>
+  <circle cx="42" cy="35" r="3" fill="#E0D4FF"/>
+  <!-- Left wing -->
+  <path d="M30 48 L20 58 L28 52 Z" fill="url(#rocketWing)"/>
+  <!-- Right wing -->
+  <path d="M46 32 L58 24 L52 36 Z" fill="url(#rocketWing)"/>
+  <!-- Flame -->
+  <ellipse cx="32" cy="56" rx="5" ry="8" transform="rotate(-45 32 56)" fill="url(#flame)"/>
+
+  <!-- Softy text -->
+  <text x="72" y="50" font-family="'Georgia', serif" font-size="28" font-weight="700" font-style="italic" fill="url(#textSofty)">Softy</text>
+  <!-- Pinko text -->
+  <text x="140" y="50" font-family="'Georgia', serif" font-size="28" font-weight="700" font-style="italic" fill="url(#textPinko)">Pinko</text>
+</svg>
