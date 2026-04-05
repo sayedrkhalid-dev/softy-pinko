@@ -1,15 +1,16 @@
 import banner_bg from "../../assets/bg-hero.png";
 import banner_main from "../../assets/main-hero.png";
+import Stats from "../Stats/Stats";
 
-const Banner = () => {
+const Banner = ({ stats }) => {
   return (
     <section
       style={{ backgroundImage: `url(${banner_bg})` }}
       className="bg-no-repeat bg-center bg-cover relative"
     >
-      <div className="w-full max-w-11/12 mx-auto min-h-dvh flex flex-col md:flex-row md:justify-between md:items-center gap-8 md:gap-0 pt-20 overflow-hidden border">
+      <div className="w-full max-w-11/12 mx-auto min-h-dvh flex flex-col md:flex-row md:justify-between md:items-center gap-8 md:gap-0 pt-20 overflow-hidden">
         {/* Banner left */}
-        <div className="md:flex-1 order-2 md:order-1 flex flex-col gap-8">
+        <div className="flex-1 flex flex-col gap-8">
           {/* Banner badge */}
           <div className="flex gap-2 bg-gray-100/20 text-gray-50 text-sm font-semibold tracking-wider border border-gray-300/50 w-fit px-4 py-2 rounded-full">
             <span>🚀</span>
@@ -42,7 +43,7 @@ const Banner = () => {
         </div>
 
         {/* Banner right */}
-        <div className="md:flex-1 order-1 md:order-2 flex justify-center items-center">
+        <div className="flex-1 flex flex-col justify-center items-center gap-4">
           <div>
             <img
               src={banner_main}
@@ -50,6 +51,9 @@ const Banner = () => {
               className="rounded-lg opacity-85"
             />
           </div>
+
+          {/* Stats */}
+          <Stats stats={stats} />
         </div>
       </div>
     </section>

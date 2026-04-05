@@ -1,4 +1,4 @@
-export const NAV_ITEMS = [
+export const links = [
   {
     id: 1,
     label: "Home",
