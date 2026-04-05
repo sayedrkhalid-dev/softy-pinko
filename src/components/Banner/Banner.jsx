@@ -8,7 +8,7 @@ const Banner = ({ stats }) => {
       style={{ backgroundImage: `url(${banner_bg})` }}
       className="bg-no-repeat bg-center bg-cover relative"
     >
-      <div className="w-full max-w-11/12 mx-auto min-h-dvh flex flex-col md:flex-row md:justify-between md:items-center gap-8 md:gap-0 pt-20 overflow-hidden">
+      <div className="w-full max-w-11/12 mx-auto min-h-dvh flex flex-col md:flex-row md:justify-between md:items-center gap-8 md:gap-0 pt-28 pb-8 overflow-hidden">
         {/* Banner left */}
         <div className="flex-1 flex flex-col gap-8">
           {/* Banner badge */}
@@ -44,11 +44,11 @@ const Banner = ({ stats }) => {
 
         {/* Banner right */}
         <div className="flex-1 flex flex-col justify-center items-center gap-4">
-          <div>
+          <div className="w-full h-full">
             <img
               src={banner_main}
               alt="Banner image"
-              className="rounded-lg opacity-85"
+              className="w-full h-full rounded-lg opacity-75"
             />
           </div>
 
