@@ -21,7 +21,7 @@ const Workflow = ({ workflow }) => {
         <div className="flex justify-center">
           <ul className="flex flex-wrap justify-center gap-6">
             {workflow.map((step) => (
-              <li key={step.id} className="flex-none w-32 p-2">
+              <li key={step.id} className="flex-none w-26 md:w-32 p-2">
                 <div className="flex flex-col items-center text-center">
                   {/* Icon Container */}
                   <div className="flex items-center justify-center p-4 rounded-full bg-gray-100 backdrop-blur-md border border-gray-300 shadow-lg mb-4">
