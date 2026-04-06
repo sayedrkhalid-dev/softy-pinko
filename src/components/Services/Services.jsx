@@ -7,10 +7,10 @@ const Services = ({ services }) => {
       className="bg-no-repeat bg-center bg-cover"
     >
       <div className="w-full max-w-11/12 mx-auto py-16 flex flex-col items-center text-center gap-6">
-        <h1 className="text-2xl md:text-3xl font-bold">
+        <h1 className="text-2xl md:text-3xl font-bold md:px-30">
           We provide the best strategy to grow up your business
         </h1>
-        <p className="text-gray-600">
+        <p className="text-gray-600 md:px-30">
           Softy Pinko is a professional Bootstrap 4.0 theme designed by Template
           Mo for your company at absolutely free of charge.
         </p>
