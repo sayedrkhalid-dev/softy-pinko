@@ -11,6 +11,7 @@ import Workflow from "./components/Wrokflow/Workflow";
 import About from "./components/About/About";
 import Pricing from "./components/Pricing/Pricing";
 import Contact from "./components/Contact/Contact";
+import Footer from "./components/Footer/Footer";
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
       <Services services={services} />
       <Pricing pricing={pricing} />
       <Contact contacts={contacts} />
+      <Footer />
     </>
   );
 };
