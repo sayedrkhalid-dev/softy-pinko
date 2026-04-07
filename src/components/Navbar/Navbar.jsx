@@ -1,9 +1,19 @@
+import { useEffect, useState } from "react";
 import logo from "../../assets/logo.png";
 import { CgMenuLeft as MenuIcon } from "react-icons/cg";
 
 const Navbar = ({ items }) => {
+  const [scrolled, setCrolled] = useState(false);
+  useEffect(() => {
+    const h = () => setCrolled(window.scrollY > 40);
+    window.addEventListener("scroll", h);
+    return () => window.removeEventListener("scroll", h);
+  });
+
   return (
-    <nav className="fixed top-0 left-0 w-full bg-transparent z-10">
+    <nav
+      className={`fixed top-0 left-0 w-full z-10 transition-all duration-300 ${scrolled ? "bg-gray-100 shadow-md" : "bg-transparent"}`}
+    >
       {/* Navbar content */}
       <div className="navbar w-full max-w-11/12 mx-auto h-18">
         {/* Navbar start */}
@@ -43,7 +53,7 @@ const Navbar = ({ items }) => {
             {items.map((item) => (
               <li
                 key={item.id}
-                className="text-purple-800 text-base font-semibold select-none cursor-pointer transition-all ease-in-out duration-300 hover:text-pink-500"
+                className={`${scrolled ? "text-purple-800" : "text-gray-50"} text-base font-semibold select-none cursor-pointer transition-all ease-in-out duration-300 hover:text-pink-500`}
               >
                 {item.label}
               </li>
