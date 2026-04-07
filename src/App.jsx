@@ -2,11 +2,13 @@ import { links } from "../public/data/links";
 import { banner_stats, about_stats, highlights } from "../public/data/stats";
 import { services } from "../public/data/services";
 import { workflow } from "../public/data/workflow";
+import { pricing } from "../public/data/pricing";
 import Banner from "./components/Banner/Banner";
 import Navbar from "./components/Navbar/Navbar";
 import Services from "./components/Services/Services";
 import Workflow from "./components/Wrokflow/Workflow";
 import About from "./components/About/About";
+import Pricing from "./components/Pricing/Pricing";
 
 const App = () => {
   return (
@@ -16,6 +18,7 @@ const App = () => {
       <About stats={about_stats} highlights={highlights} />
       <Workflow workflow={workflow} />
       <Services services={services} />
+      <Pricing pricing={pricing} />
     </>
   );
 };
