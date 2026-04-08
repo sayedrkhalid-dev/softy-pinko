@@ -11,21 +11,26 @@ export const links = [
   },
   {
     id: 3,
+    label: "workflow",
+    path: "/workflow",
+  },
+  {
+    id: 4,
     label: "services",
     path: "/services",
   },
   {
-    id: 4,
+    id: 5,
     label: "pricing",
     path: "/pricing",
   },
   {
-    id: 5,
+    id: 6,
     label: "blogs",
     path: "/blog",
   },
   {
-    id: 6,
+    id: 7,
     label: "contact",
     path: "/contact",
   },
