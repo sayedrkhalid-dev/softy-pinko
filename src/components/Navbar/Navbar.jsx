@@ -5,6 +5,7 @@ import scrollToSection from "../../scrollToSection/scrollToSection";
 
 const Navbar = ({ items }) => {
   const [scrolled, setScrolled] = useState(false);
+  const [activeItem, setActiveItem] = useState("home");
 
   useEffect(() => {
     const h = () => setScrolled(window.scrollY > 40);
@@ -34,8 +35,11 @@ const Navbar = ({ items }) => {
             >
               {items.map((item) => (
                 <li
-                  onClick={() => scrollToSection(item.label)}
                   key={item.id}
+                  onClick={() => {
+                    setActiveItem(item.label);
+                    scrollToSection(item.label);
+                  }}
                   className="text-purple-800 text-base font-semibold capitalize select-none cursor-pointer transition-all ease-in-out duration-300 hover:text-pink-500"
                 >
                   {item.label}
@@ -59,8 +63,11 @@ const Navbar = ({ items }) => {
             {items.map((item) => (
               <li
                 key={item.id}
-                onClick={() => scrollToSection(item.label)}
-                className={`${scrolled ? "text-purple-800" : "text-gray-50"} text-base font-semibold capitalize select-none cursor-pointer transition-all ease-in-out duration-300 hover:text-pink-500`}
+                onClick={() => {
+                  setActiveItem(item.label);
+                  scrollToSection(item.label);
+                }}
+                className={`${activeItem === item.label ? "text-pink-500" : "text-gray-50"} ${scrolled && activeItem === item.label ? "text-pink-500" : scrolled && activeItem !== item.label ? "text-purple-800" : "text-gray-50"} text-base font-semibold capitalize select-none cursor-pointer transition-all ease-in-out duration-300 hover:text-pink-500`}
               >
                 {item.label}
               </li>
