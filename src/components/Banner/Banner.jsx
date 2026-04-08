@@ -1,6 +1,7 @@
 import banner_bg from "../../assets/bg-hero.png";
 import banner_main from "../../assets/main-hero.png";
 import Stats from "../Stats/Stats";
+import Reveal from "../../hooks/Reveal";
 
 const Banner = ({ stats }) => {
   return (
@@ -10,7 +11,7 @@ const Banner = ({ stats }) => {
     >
       <div className="w-full max-w-11/12 mx-auto min-h-dvh flex flex-col md:flex-row md:justify-between md:items-center gap-8 md:gap-0 pt-28 pb-8 overflow-hidden">
         {/* Banner left */}
-        <div className="flex-1 flex flex-col gap-8">
+        <Reveal direction="up" className="flex-1 flex flex-col gap-8">
           {/* Banner badge */}
           <div className="flex gap-2 bg-gray-100/20 text-gray-50 text-sm font-semibold tracking-wider border border-gray-300/50 w-fit px-4 py-2 rounded-full">
             <span>🚀</span>
@@ -40,10 +41,13 @@ const Banner = ({ stats }) => {
               Our Process
             </button>
           </div>
-        </div>
+        </Reveal>
 
         {/* Banner right */}
-        <div className="flex-1 flex flex-col justify-center items-center gap-4">
+        <Reveal
+          direction="right"
+          className="flex-1 flex flex-col justify-center items-center gap-4"
+        >
           <div className="w-full h-full">
             <img
               src={banner_main}
@@ -54,7 +58,7 @@ const Banner = ({ stats }) => {
 
           {/* Stats */}
           <Stats stats={stats} />
-        </div>
+        </Reveal>
       </div>
     </section>
   );

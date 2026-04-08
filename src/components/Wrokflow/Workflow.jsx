@@ -1,4 +1,5 @@
 import workflow_bg from "../../assets/bg-workflow.png";
+import Reveal from "../../hooks/Reveal";
 
 const Workflow = ({ workflow }) => {
   return (
@@ -20,8 +21,13 @@ const Workflow = ({ workflow }) => {
         {/* Workflow Steps Container */}
         <div className="flex justify-center">
           <ul className="flex flex-wrap justify-center gap-6">
-            {workflow.map((step) => (
-              <li key={step.id} className="flex-none w-26 md:w-32 p-2">
+            {workflow.map((step, index) => (
+              <Reveal
+                direction="down"
+                delay={index * 80}
+                key={step.id}
+                className="flex-none w-26 md:w-32 p-2"
+              >
                 <div className="flex flex-col items-center text-center">
                   {/* Icon Container */}
                   <div className="flex items-center justify-center p-4 rounded-full bg-gray-100 backdrop-blur-md border border-gray-300 shadow-lg mb-4">
@@ -42,7 +48,7 @@ const Workflow = ({ workflow }) => {
                     {step.description}
                   </p>
                 </div>
-              </li>
+              </Reveal>
             ))}
           </ul>
         </div>

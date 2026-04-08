@@ -1,5 +1,6 @@
 import bg from "../../assets/bg-hero.png";
 import { FaCheck as Check } from "react-icons/fa6";
+import Reveal from "../../hooks/Reveal";
 
 const Pricing = ({ pricing }) => {
   return (
@@ -17,8 +18,10 @@ const Pricing = ({ pricing }) => {
 
         <div className="flex items-center justify-center mt-8">
           <ul className="flex gap-6 items-center justify-center flex-wrap">
-            {pricing.map((price) => (
-              <li
+            {pricing.map((price, index) => (
+              <Reveal
+                direction="down"
+                delay={index * 80}
                 key={price.id}
                 className="card flex-none w-full sm:w-64 md:w-72 bg-gray-100 shadow-sm relative rounded-2xl transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md"
               >
@@ -59,7 +62,7 @@ const Pricing = ({ pricing }) => {
                     </button>
                   </div>
                 </div>
-              </li>
+              </Reveal>
             ))}
           </ul>
         </div>

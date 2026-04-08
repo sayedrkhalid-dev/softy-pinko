@@ -3,6 +3,7 @@ import { FaArrowRightLong as RightArrow } from "react-icons/fa6";
 import { FaRegAddressCard as Address } from "react-icons/fa";
 import { MdOutlineMailOutline as Email } from "react-icons/md";
 import { MdOutlinePhoneInTalk as Phone } from "react-icons/md";
+import Reveal from "../../hooks/Reveal";
 
 const Contact = ({ contacts }) => {
   return (
@@ -12,7 +13,7 @@ const Contact = ({ contacts }) => {
     >
       <div className="w-full max-w-11/12 mx-auto min-h-dvh flex flex-col md:flex-row md:justify-between md:items-center gap-10 py-16 overflow-hidden">
         {/* Contact left */}
-        <div className="flex-1 flex flex-col gap-2">
+        <Reveal direction="left" className="flex-1 flex flex-col gap-2">
           {/* Contact title */}
           <h1 className="text-2xl md:text-3xl font-bold text-gray-900">
             Get In Touch
@@ -26,8 +27,13 @@ const Contact = ({ contacts }) => {
 
           {/* Contact info */}
           <ul className="flex flex-col gap-4 mt-8">
-            {contacts.map((contact) => (
-              <li key={contact.id} className="flex items-center gap-2">
+            {contacts.map((contact, index) => (
+              <Reveal
+                direction="left"
+                delay={index * 80}
+                key={contact.id}
+                className="flex items-center gap-2"
+              >
                 <span className="bg-gray-100 border border-gray-300 p-4 rounded-full">
                   {contact.type === "Address" ? (
                     <Address size={32} />
@@ -41,13 +47,16 @@ const Contact = ({ contacts }) => {
                   <h1 className="font-semibold">{contact.type}</h1>
                   <p className="text-sm text-gray-700">{contact.value}</p>
                 </div>
-              </li>
+              </Reveal>
             ))}
           </ul>
-        </div>
+        </Reveal>
 
         {/* Contact right */}
-        <div className="flex-1 flex flex-col justify-center items-center gap-4 p-6 bg-white border border-gray-100 shadow-md  rounded-2xl">
+        <Reveal
+          direction="right"
+          className="flex-1 flex flex-col justify-center items-center gap-4 p-6 bg-white border border-gray-100 shadow-md  rounded-2xl"
+        >
           <fieldset className="w-full flex flex-col gap-4">
             <div className="flex gap-4">
               <input
@@ -79,7 +88,7 @@ const Contact = ({ contacts }) => {
               <RightArrow />
             </button>
           </fieldset>
-        </div>
+        </Reveal>
       </div>
     </section>
   );

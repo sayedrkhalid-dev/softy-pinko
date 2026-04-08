@@ -1,6 +1,7 @@
 import bg_wave from "../../assets/bg-wave.png";
 import about_main from "../../assets/about.png";
 import { FaRegSquareCheck as Check } from "react-icons/fa6";
+import Reveal from "../../hooks/Reveal";
 
 const About = ({ stats, highlights }) => {
   return (
@@ -10,7 +11,10 @@ const About = ({ stats, highlights }) => {
     >
       <div className="max-w-6xl mx-auto px-6 flex flex-col lg:flex-row items-center">
         {/* LEFT IMAGE */}
-        <div className="flex-1 flex justify-center relative">
+        <Reveal
+          direction="left"
+          className="flex-1 flex justify-center relative"
+        >
           <div className="w-72 h-72 md:w-80 md:h-80 rounded-full bg-linear-to-tr from-purple-200 to-pink-200 p-6 shadow-xl">
             <div className="w-full h-full bg-white rounded-full flex items-center justify-center overflow-hidden">
               <img
@@ -23,10 +27,13 @@ const About = ({ stats, highlights }) => {
 
           {/* Decorative blur */}
           <div className="absolute -z-10 w-72 h-72 bg-purple-400/20 blur-3xl rounded-full"></div>
-        </div>
+        </Reveal>
 
         {/* RIGHT CONTENT */}
-        <div className="flex-1 flex flex-col gap-2 text-center lg:text-left">
+        <Reveal
+          direction="right"
+          className="flex-1 flex flex-col gap-2 text-center lg:text-left"
+        >
           {/* Badge */}
           <div className="w-fit mx-auto lg:mx-0 px-4 py-1.5 rounded-full bg-purple-100 text-purple-700 text-xs font-semibold uppercase tracking-wider border border-purple-200">
             About Us
@@ -49,21 +56,25 @@ const About = ({ stats, highlights }) => {
 
           {/* Highlights */}
           <div className="flex flex-wrap gap-2 justify-center lg:justify-start">
-            {highlights.map((highlight) => (
-              <div
+            {highlights.map((highlight, index) => (
+              <Reveal
+                direction="down"
+                delay={index * 80}
                 key={highlight.id}
                 className="flex items-center gap-2 text-purple-700 font-medium bg-purple-50 px-3 py-1.5 rounded-lg border border-purple-100 shadow-sm hover:shadow-md transition"
               >
                 <Check className="text-purple-500" />
                 {highlight.title}
-              </div>
+              </Reveal>
             ))}
           </div>
 
           {/* Stats */}
           <div className="grid grid-cols-3 gap-4">
-            {stats.map((stat) => (
-              <div
+            {stats.map((stat, index) => (
+              <Reveal
+                direction="down"
+                delay={index * 80}
                 key={stat.id}
                 className="bg-white/70 backdrop-blur-md border border-gray-200 rounded-xl py-4 flex flex-col items-center shadow-sm hover:shadow-md transition"
               >
@@ -74,10 +85,10 @@ const About = ({ stats, highlights }) => {
                 <span className="text-xs md:text-sm text-gray-500">
                   {stat.label}
                 </span>
-              </div>
+              </Reveal>
             ))}
           </div>
-        </div>
+        </Reveal>
       </div>
     </section>
   );

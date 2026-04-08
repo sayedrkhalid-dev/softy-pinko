@@ -1,4 +1,5 @@
 import bg_wave from "../../assets/bg-wave.png";
+import Reveal from "../../hooks/Reveal";
 
 const Services = ({ services }) => {
   return (
@@ -16,8 +17,10 @@ const Services = ({ services }) => {
         </p>
 
         <ul className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {services.map((service) => (
-            <li
+          {services.map((service, index) => (
+            <Reveal
+              direction="down"
+              delay={index * 80}
               key={service.id}
               className="card border border-purple-300 shadow-md shadow-purple-200 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg"
             >
@@ -34,7 +37,7 @@ const Services = ({ services }) => {
                 {/* Service description */}
                 <p className="text-gray-500">{service.description}</p>
               </div>
-            </li>
+            </Reveal>
           ))}
         </ul>
       </div>
