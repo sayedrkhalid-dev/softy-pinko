@@ -33,7 +33,7 @@ const Navbar = ({ items }) => {
               {items.map((item) => (
                 <li
                   key={item.id}
-                  className="text-purple-800 text-base font-semibold select-none cursor-pointer transition-all ease-in-out duration-300 hover:text-pink-500"
+                  className="text-purple-800 text-base font-semibold capitalize select-none cursor-pointer transition-all ease-in-out duration-300 hover:text-pink-500"
                 >
                   {item.label}
                 </li>
@@ -53,7 +53,7 @@ const Navbar = ({ items }) => {
             {items.map((item) => (
               <li
                 key={item.id}
-                className={`${scrolled ? "text-purple-800" : "text-gray-50"} text-base font-semibold select-none cursor-pointer transition-all ease-in-out duration-300 hover:text-pink-500`}
+                className={`${scrolled ? "text-purple-800" : "text-gray-50"} text-base font-semibold capitalize select-none cursor-pointer transition-all ease-in-out duration-300 hover:text-pink-500`}
               >
                 {item.label}
               </li>
