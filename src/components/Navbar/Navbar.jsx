@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 import logo from "../../assets/logo.png";
 import { CgMenuLeft as MenuIcon } from "react-icons/cg";
+import scrollToSection from "../../scrollToSection/scrollToSection";
 
 const Navbar = ({ items }) => {
   const [scrolled, setScrolled] = useState(false);
+
   useEffect(() => {
     const h = () => setScrolled(window.scrollY > 40);
     window.addEventListener("scroll", h);
@@ -32,6 +34,7 @@ const Navbar = ({ items }) => {
             >
               {items.map((item) => (
                 <li
+                  onClick={() => scrollToSection(item.label)}
                   key={item.id}
                   className="text-purple-800 text-base font-semibold capitalize select-none cursor-pointer transition-all ease-in-out duration-300 hover:text-pink-500"
                 >
@@ -42,7 +45,10 @@ const Navbar = ({ items }) => {
           </div>
 
           {/* Logo */}
-          <a href="3" className="w-40 select-none">
+          <a
+            onClick={() => scrollToSection("home")}
+            className="w-40 select-none cursor-pointer"
+          >
             <img src={logo} alt="Logo" className="object-contain" />
           </a>
         </div>
@@ -53,6 +59,7 @@ const Navbar = ({ items }) => {
             {items.map((item) => (
               <li
                 key={item.id}
+                onClick={() => scrollToSection(item.label)}
                 className={`${scrolled ? "text-purple-800" : "text-gray-50"} text-base font-semibold capitalize select-none cursor-pointer transition-all ease-in-out duration-300 hover:text-pink-500`}
               >
                 {item.label}
@@ -63,7 +70,10 @@ const Navbar = ({ items }) => {
 
         {/* Navbar end */}
         <div className="navbar-end">
-          <button className="btn border-0 bg-linear-to-r from-purple-600 to-pink-600 text-white rounded-full px-6 py-2 shadow transition-all  duration-300 hover:-translate-y-0.5 hover:shadow-md">
+          <button
+            onClick={() => scrollToSection("contact")}
+            className="btn border-0 bg-linear-to-r from-purple-600 to-pink-600 text-white rounded-full px-6 py-2 shadow transition-all  duration-300 hover:-translate-y-0.5 hover:shadow-md"
+          >
             Get Started
           </button>
         </div>

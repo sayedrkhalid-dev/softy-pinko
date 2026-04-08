@@ -2,6 +2,7 @@ import banner_bg from "../../assets/bg-hero.png";
 import banner_main from "../../assets/main-hero.png";
 import Stats from "../Stats/Stats";
 import Reveal from "../../hooks/Reveal";
+import scrollToSection from "../../scrollToSection/scrollToSection";
 
 const Banner = ({ stats }) => {
   return (
@@ -33,12 +34,18 @@ const Banner = ({ stats }) => {
           {/* Banner buttons */}
           <div className="flex gap-4">
             {/* Banner primary button */}
-            <button className="bg-gray-100 text-purple-600 font-bold px-4 md:px-8 py-3 rounded-full shadow-md cursor-pointer transition-all duration-300 hover:-translate-y-0.5">
+            <button
+              onClick={() => scrollToSection("about")}
+              className="bg-gray-100 text-purple-600 font-bold px-4 md:px-8 py-3 rounded-full shadow-md cursor-pointer transition-all duration-300 hover:-translate-y-0.5"
+            >
               Discover More
             </button>
 
             {/* Banner secondary button */}
-            <button className="bg-gray-100/20 text-gray-50 border-2 border-gray-300/50 font-bold px-4 md:px-8 py-3 rounded-full shadow-md cursor-pointer transition-all duration-300 hover:-translate-y-0.5">
+            <button
+              onClick={() => scrollToSection("workflow")}
+              className="bg-gray-100/20 text-gray-50 border-2 border-gray-300/50 font-bold px-4 md:px-8 py-3 rounded-full shadow-md cursor-pointer transition-all duration-300 hover:-translate-y-0.5"
+            >
               Our Process
             </button>
           </div>

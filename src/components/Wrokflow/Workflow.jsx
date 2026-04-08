@@ -4,6 +4,7 @@ import Reveal from "../../hooks/Reveal";
 const Workflow = ({ workflow }) => {
   return (
     <section
+      id="workflow"
       style={{ backgroundImage: `url(${workflow_bg})` }}
       className="bg-no-repeat bg-center bg-cover"
     >

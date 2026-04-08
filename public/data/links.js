@@ -12,7 +12,7 @@ export const links = [
   {
     id: 3,
     label: "services",
-    path: "/work",
+    path: "/services",
   },
   {
     id: 4,
