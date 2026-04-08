@@ -5,6 +5,7 @@ import Reveal from "../../hooks/Reveal";
 const Pricing = ({ pricing }) => {
   return (
     <section
+      id="pricing"
       style={{ backgroundImage: `url(${bg})` }}
       className="bg-no-repeat bg-center bg-cover"
     >

@@ -4,6 +4,7 @@ import Reveal from "../../hooks/Reveal";
 const Services = ({ services }) => {
   return (
     <section
+      id="services"
       style={{ backgroundImage: `url(${bg_wave})` }}
       className="bg-no-repeat bg-center bg-cover"
     >

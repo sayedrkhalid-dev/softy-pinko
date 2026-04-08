@@ -6,6 +6,7 @@ import Reveal from "../../hooks/Reveal";
 const Banner = ({ stats }) => {
   return (
     <section
+      id="banner"
       style={{ backgroundImage: `url(${banner_bg})` }}
       className="bg-no-repeat bg-center bg-cover relative"
     >

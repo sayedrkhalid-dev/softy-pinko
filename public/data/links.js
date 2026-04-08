@@ -1,32 +1,32 @@
 export const links = [
   {
     id: 1,
-    label: "Home",
+    label: "home",
     path: "/",
   },
   {
     id: 2,
-    label: "About",
+    label: "about",
     path: "/about",
   },
   {
     id: 3,
-    label: "Services",
+    label: "services",
     path: "/work",
   },
   {
     id: 4,
-    label: "Pricing",
+    label: "pricing",
     path: "/pricing",
   },
   {
     id: 5,
-    label: "Blogs",
+    label: "blogs",
     path: "/blog",
   },
   {
     id: 6,
-    label: "Contact",
+    label: "contact",
     path: "/contact",
   },
 ];

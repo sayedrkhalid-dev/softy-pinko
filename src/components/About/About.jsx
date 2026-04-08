@@ -6,6 +6,7 @@ import Reveal from "../../hooks/Reveal";
 const About = ({ stats, highlights }) => {
   return (
     <section
+      id="about"
       style={{ backgroundImage: `url(${bg_wave})` }}
       className="bg-no-repeat bg-center bg-cover relative py-16"
     >
