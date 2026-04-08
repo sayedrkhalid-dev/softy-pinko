@@ -3,9 +3,9 @@ import logo from "../../assets/logo.png";
 import { CgMenuLeft as MenuIcon } from "react-icons/cg";
 
 const Navbar = ({ items }) => {
-  const [scrolled, setCrolled] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   useEffect(() => {
-    const h = () => setCrolled(window.scrollY > 40);
+    const h = () => setScrolled(window.scrollY > 40);
     window.addEventListener("scroll", h);
     return () => window.removeEventListener("scroll", h);
   });
