@@ -2,9 +2,9 @@ import bg from "../../assets/bg-dark.png";
 
 const Footer = () => {
   return (
-    <footer style={{ backgroundImage: `url(${bg})` }} className="">
+    <footer style={{ backgroundImage: `url(${bg})` }}>
       <div className="w-full max-w-11/12 mx-auto py-16">
-        <div className="text-gray-50 flex justify-between">
+        <div className="text-gray-50 flex justify-between gap-8 flex-wrap">
           <nav className="flex flex-col">
             <h6 className="footer-title">Services</h6>
             <a className="link link-hover text-sm text-gray-300">Branding</a>
